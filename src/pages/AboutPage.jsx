@@ -11,7 +11,6 @@ import {
   Star,
   Quote
 } from 'lucide-react';
-import '../styles/pages/AboutPage.css';
 
 const AboutPage = () => {
   const stats = [
@@ -111,29 +110,29 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="about-page">
+    <div>
       {/* Hero Section */}
-      <section className="hero">
-        <div className="container">
-          <div className="hero-content">
-            <h1>Tentang OnlySmart</h1>
-            <p className="hero-subtitle">
-              Platform pembelajaran online terdepan yang menghubungkan siswa dengan instruktur expert 
-              untuk mengembangkan skill yang dibutuhkan di era digital.
-            </p>
-          </div>
+      <section className="bg-gradient-to-br from-primary-50 to-primary-100 py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Tentang OnlySmart</h1>
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed">
+            Platform pembelajaran online terdepan yang menghubungkan siswa dengan instruktur expert 
+            untuk mengembangkan skill yang dibutuhkan di era digital.
+          </p>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="stats-section">
-        <div className="container">
-          <div className="stats-grid">
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="stat-card">
-                <stat.icon size={40} className="text-primary" />
-                <h3>{stat.number}</h3>
-                <p>{stat.label}</p>
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-primary-100 rounded-3xl mb-6 group-hover:bg-primary-500 transition-colors duration-300">
+                  <stat.icon size={40} className="text-primary-500 group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{stat.number}</h3>
+                <p className="text-gray-600 font-medium">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -141,26 +140,26 @@ const AboutPage = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section">
-        <div className="container">
-          <div className="mission-vision">
-            <div className="mission">
-              <div className="icon-wrapper">
-                <Target size={48} />
+      <section className="py-16 lg:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-primary-100 rounded-3xl mb-8">
+                <Target size={48} className="text-primary-500" />
               </div>
-              <h2>Misi Kami</h2>
-              <p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Misi Kami</h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Memberikan akses pendidikan berkualitas tinggi kepada semua orang, 
                 di mana pun mereka berada, untuk mengembangkan skill yang relevan 
                 dengan kebutuhan industri modern.
               </p>
             </div>
-            <div className="vision">
-              <div className="icon-wrapper">
-                <Eye size={48} />
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-primary-100 rounded-3xl mb-8">
+                <Eye size={48} className="text-primary-500" />
               </div>
-              <h2>Visi Kami</h2>
-              <p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Visi Kami</h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Menjadi platform pembelajaran online terdepan di Asia Tenggara 
                 yang memberdayakan jutaan orang untuk mencapai potensi terbaik 
                 mereka melalui pendidikan yang accessible dan berkualitas.
@@ -171,20 +170,20 @@ const AboutPage = () => {
       </section>
 
       {/* Values */}
-      <section className="section bg-lighter">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2>Nilai-Nilai Kami</h2>
-            <p>Prinsip yang memandu setiap langkah perjalanan OnlySmart</p>
+      <section className="py-16 lg:py-20 bg-primary-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Nilai-Nilai Kami</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Prinsip yang memandu setiap langkah perjalanan OnlySmart</p>
           </div>
-          <div className="values-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="value-card">
-                <div className="value-icon">
-                  <value.icon size={32} />
+              <div key={index} className="bg-white rounded-3xl p-8 text-center shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-2xl mb-6">
+                  <value.icon size={32} className="text-primary-500" />
                 </div>
-                <h3>{value.title}</h3>
-                <p>{value.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -192,20 +191,22 @@ const AboutPage = () => {
       </section>
 
       {/* Team */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2>Tim Kami</h2>
-            <p>Bertemu dengan para visioner di balik OnlySmart</p>
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Tim Kami</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Bertemu dengan para visioner di balik OnlySmart</p>
           </div>
-          <div className="team-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
-              <div key={member.id} className="team-card">
-                <img src={member.image} alt={member.name} className="team-image" />
-                <div className="team-content">
-                  <h3>{member.name}</h3>
-                  <p className="position">{member.position}</p>
-                  <p className="description">{member.description}</p>
+              <div key={member.id} className="bg-gray-50 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                <div className="aspect-square overflow-hidden">
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-primary-500 font-semibold mb-3">{member.position}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
                 </div>
               </div>
             ))}
@@ -214,18 +215,24 @@ const AboutPage = () => {
       </section>
 
       {/* Timeline */}
-      <section className="section bg-lighter">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2>Perjalanan Kami</h2>
-            <p>Milestone penting dalam pengembangan OnlySmart</p>
+      <section className="py-16 lg:py-20 bg-primary-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Perjalanan Kami</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Milestone penting dalam pengembangan OnlySmart</p>
           </div>
-          <div className="timeline">
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
+            
             {milestones.map((milestone, index) => (
-              <div key={index} className="timeline-item">
-                <div className="timeline-year">{milestone.year}</div>
-                <div className="timeline-content">
-                  <p>{milestone.event}</p>
+              <div key={index} className="relative flex items-start mb-8 last:mb-0">
+                <div className="flex-shrink-0 w-16 h-16 bg-primary-500 text-white rounded-full flex items-center justify-center font-bold text-lg z-10">
+                  {milestone.year.slice(-2)}
+                </div>
+                <div className="ml-8 bg-white rounded-2xl p-6 shadow-lg flex-1">
+                  <div className="text-sm font-semibold text-primary-500 mb-2">{milestone.year}</div>
+                  <p className="text-gray-700 leading-relaxed">{milestone.event}</p>
                 </div>
               </div>
             ))}
@@ -234,27 +241,27 @@ const AboutPage = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2>Apa Kata Mereka</h2>
-            <p>Testimoni dari siswa yang telah merasakan manfaat OnlySmart</p>
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Apa Kata Mereka</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Testimoni dari siswa yang telah merasakan manfaat OnlySmart</p>
           </div>
-          <div className="testimonials-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="testimonial-card">
-                <Quote size={32} className="quote-icon" />
-                <p className="testimonial-content">{testimonial.content}</p>
-                <div className="testimonial-rating">
+              <div key={testimonial.id} className="bg-gray-50 rounded-3xl p-8 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 relative">
+                <Quote size={32} className="text-primary-200 mb-6" />
+                <p className="text-gray-700 leading-relaxed mb-6 italic">"{testimonial.content}"</p>
+                <div className="flex items-center gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="star-filled" />
+                    <Star key={i} size={16} className="text-yellow-500 fill-current" />
                   ))}
                 </div>
-                <div className="testimonial-author">
-                  <img src={testimonial.image} alt={testimonial.name} />
+                <div className="flex items-center gap-4">
+                  <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
                   <div>
-                    <h4>{testimonial.name}</h4>
-                    <p>{testimonial.position}</p>
+                    <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-600">{testimonial.position}</p>
                   </div>
                 </div>
               </div>
@@ -264,22 +271,22 @@ const AboutPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Bergabunglah dengan Revolusi Pembelajaran</h2>
-            <p>
-              Mulai perjalanan pembelajaran Anda bersama ribuan siswa lainnya 
-              dan raih kesuksesan yang Anda impikan.
-            </p>
-            <div className="cta-buttons">
-              <a href="/register" className="btn btn-primary">
-                Mulai Belajar Sekarang
-              </a>
-              <a href="/courses" className="btn btn-outline">
-                Jelajahi Kelas
-              </a>
-            </div>
+      <section className="py-16 lg:py-20 bg-gradient-to-r from-primary-500 to-primary-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Bergabunglah dengan Revolusi Pembelajaran
+          </h2>
+          <p className="text-lg lg:text-xl text-primary-100 mb-8 leading-relaxed">
+            Mulai perjalanan pembelajaran Anda bersama ribuan siswa lainnya 
+            dan raih kesuksesan yang Anda impikan.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/register" className="bg-white text-primary-500 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-colors">
+              Mulai Belajar Sekarang
+            </Link>
+            <Link to="/courses" className="border-2 border-white text-white hover:bg-white hover:text-primary-500 px-8 py-4 rounded-xl font-semibold text-lg transition-all">
+              Jelajahi Kelas
+            </Link>
           </div>
         </div>
       </section>

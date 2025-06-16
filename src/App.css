@@ -13,14 +13,11 @@ body {
 }
 
 .App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  @apply min-h-screen flex flex-col;
 }
 
 .main-content {
-  flex: 1;
-  padding-top: clamp(60px, 8vh, 100px); /* Responsive navbar space */
+  @apply flex-1 pt-16 md:pt-20 lg:pt-24;
 }
 
 /* Color Palette - Light Blue Theme */
